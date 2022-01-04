@@ -1,1 +1,1 @@
-web: gunicorn feature 1:app --log-file -
+web: gunicorn feature 1:server
