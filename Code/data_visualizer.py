@@ -20,7 +20,7 @@ df.set_index('ACCIDENT_DATE', inplace=True)
 app = dash.Dash(
     external_stylesheets=[dbc.themes.SOLAR]
 )
-server=app.server()
+server=app.server
 # App layout sets the main layout of the app
 
 app.layout = dbc.Container(fluid=True, children=[
