@@ -8,16 +8,7 @@ import pandas as pd
 import dash_bootstrap_components as dbc
 
 # importing Dataset
-while True:
-    dataset = input("Enter the name of the file"
-    "\n \n Please type in the path to your file and press 'Enter': ")
-    try:
-        df = pd.read_csv(dataset, delimiter=',')
-    except FileNotFoundError:
-        print("Wrong file or file path")
-    else:
-        break
-
+df = pd.read_csv("crash_stat.csv", delimiter=',')
 # The string data format is converted into datetime format.
 df['ACCIDENT_DATE'] = pd.to_datetime(df['ACCIDENT_DATE'])
 # Index date has been set with respect to Accident Date
