@@ -26,6 +26,7 @@ df.set_index('ACCIDENT_DATE', inplace=True)
 #the public token for dark theme is imported
 token = open('.mapbox_token').read()
 app = dash.Dash(external_stylesheets=[dbc.themes.SOLAR])
+server=app.server()
 app.layout = html.Div([
     dcc.DatePickerRange(
         id='my-date-picker-range',  # ID to be used in the callback section
